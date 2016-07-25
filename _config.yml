@@ -5,7 +5,7 @@ gems: 						[jekyll-paginate]
 # Site Settings
 title: 						"Coding Notes"
 email: 						"mauricio@bithive.io"
-description: 				"Welcome to my coding notes, a place where I share my development experiences with the world."
+description: 				"Welcome to my coding notes, where I write about things I learnt and share them with the world!"
 baseurl: 					""
 logourl: 					"/assets/img/authorimage.jpg"
 fa-logo: 					"fa-code"
