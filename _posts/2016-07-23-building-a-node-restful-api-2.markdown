@@ -12,6 +12,7 @@ comments: true
 
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous post: 
+
 - [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api  %})
 
 <!--more-->
@@ -155,7 +156,6 @@ const paths = {
 // Compile all Babel Javascript into ES5 and put it into the dist dir
 gulp.task('babel', () => {
   return gulp.src(paths.js, { base: '.' })
-    .pipe(plugins.newer('dist'))
     .pipe(plugins.babel())
     .pipe(gulp.dest('dist'));
 });
