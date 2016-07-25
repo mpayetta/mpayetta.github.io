@@ -3,8 +3,8 @@ layout: post
 title:  "Building a Node.js RESTful API: Intro and Initial Setup"
 date:   2016-07-21 12:56:45
 categories: Node.js
-banner_image: "/media/desk.jpg"
-featured: false
+banner_image: "/media/node-js-hexa.jpg"
+featured: true
 comments: true
 ---
 

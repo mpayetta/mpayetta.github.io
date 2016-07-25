@@ -11,3 +11,30 @@
 @import "index";
 @import "post";
 @import "syntax";
+
+ul.social.about {
+  margin: 0 10px 10px 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: inherit;
+  @include transition(all 0.25s ease-out);
+
+  li {
+    list-style: none;
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 0;
+
+
+    a {
+      display: inline-block;
+      padding: 9px 0;
+      width: 40px;
+      text-align: center;
+      border-radius: 41px;
+      color: #fff;
+      @include transition(all 0.25s ease-out);
+    }
+  }
+}
+
