@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building a Node.js RESTful API: DB Connect and Config"
-date:   2016-07-23 12:56:45
+date:   2016-07-25 12:56:45
 categories: Node.js
 banner_image: "/media/mongodb2.jpg"
 featured: true

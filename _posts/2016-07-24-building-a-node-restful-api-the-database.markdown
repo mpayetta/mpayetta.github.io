@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building a Node.js RESTful API: The Database"
-date:   2016-07-23 12:56:45
+date:   2016-07-24 12:56:45
 categories: Node.js
 banner_image: "/media/mongodb.jpeg"
 featured: true
