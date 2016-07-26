@@ -8,6 +8,7 @@ featured: true
 comments: true
 ---
 
+<!--more-->
 
 ## Introduction
 
@@ -16,8 +17,6 @@ Node.js, MongoDB and Babel to make use of the power that ES6 brings to the javas
 I've found myself multiple times building a RESTful API for different projects and always taken different approaches.
 Mostly because the Node.js ecosystem is growing so rapidly that whenever I start a new project there are already new
 tools and frameworks, or new versions of the frameworks I used in the past.
-
-<!--more-->
 
 You can also find lots of boilerplates ready to be used, if you're an experienced Node developer you can just grab one
 of those. The goal of this posts is to provide an understanding on how such a boilerplate can be built from scratch

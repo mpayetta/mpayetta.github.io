@@ -8,14 +8,14 @@ featured: true
 comments: true
 ---
 
+<!--more-->
+
 ## Introduction
 
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous post: 
 
 - [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
-
-<!--more-->
 
 ## The Web Server
 
