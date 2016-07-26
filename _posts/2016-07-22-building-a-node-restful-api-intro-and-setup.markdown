@@ -31,7 +31,7 @@ Well, we're living in the golden era of the internet. Nowadays to have presence 
 having a website that people can find in their desktop or laptop computers, but also to have mobile versions of your
 website, mobile applications for all the popular platforms (Android, iOS, Windows, etc) and even provide a way to 
 3rd parties to use your system.
-Following the basic concepts of systems design and architeture, this means that you need to put the access to your core
+Following the basic concepts of systems design and architecture, this means that you need to put the access to your core
 data and functionality into a module that can be used by all of your client modules (web app, mobile app, 3rd parties...).
 If we are 100% sure of something is that we don't want to replicate the same code to access our data into each of our clients.
 
@@ -145,4 +145,6 @@ That was all for the first post. At least we can say that we understand why REST
 have a node project started thanks to the `npm init` wizard.
 In the next posts we'll start giving some life to our project starting by setting up the database that will feed our 
 tasks API.
-Thanks for reading and see you in the next post!
+Thanks for reading! 
+
+See you in the next post: [Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})

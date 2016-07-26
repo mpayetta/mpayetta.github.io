@@ -3,8 +3,8 @@ layout: post
 title:  "Building a Node.js RESTful API: The Web Server"
 date:   2016-07-23 12:56:45
 categories: Node.js
-banner_image: "/media/desk.jpg"
-featured: false
+banner_image: "/media/express.jpg"
+featured: true
 comments: true
 ---
 
@@ -13,7 +13,7 @@ comments: true
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous post: 
 
-- [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api  %})
+- [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 
 <!--more-->
 
@@ -21,7 +21,7 @@ the previous post:
 
 The web server will be the core of our API. It will handle all the incoming HTTP requests, validate the payload data,
 do the necessary security checks, fetch the requested data from the database and finally answer with a valid HTTP
-response to the requestor.
+response to the requester.
 
 There are many web server options available in the [NPM registry](https://www.npmjs.com/search?q=web+server). We'll stick
 with a good ol' friend of all Node.js Developers called [Express](https://expressjs.com/). Express has proven to be one
@@ -45,7 +45,7 @@ the `package.json` file and it should have a new entry for express.
 
 ### Express Initial Configuration
 
-So we have express installed, now it's time to start coding. As I mentioned in the [first of all posts]({% post_url 2016-07-22-building-a-node-restful-api  %})
+So we have express installed, now it's time to start coding. As I mentioned in the [first of all posts]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 we'll be coding in ES6 being powered by Babel to transpile into ES5. So I will write directly Babel code in the JS files
 and we'll see later how can we transpile that with [Gulp](http://gulpjs.com/) into plain ES5 javascript to run it.
 
@@ -110,7 +110,7 @@ you feel comfortable with).
 
 There are different ways to transpile code using Babel ([quite a lot](https://babeljs.io/docs/setup/) I would say). What 
 we will do is transpile our code by using [Gulp](http://gulpjs.com/) and the Babel plugins for Gulp. The main reason we're
-doing this is that we will use Gulp to automate other tasks later (like generating api docs or running unt tests) and it's
+doing this is that we will use Gulp to automate other tasks later (like generating api docs or running unit tests) and it's
 always good to keep things consistent.
 
 So, let's move forward and start with our transpilation journey. First of all we'll need to install a few more dependencies:
@@ -185,7 +185,7 @@ all the gulp plugins we have in the `node_modules` directory and append them to 
 `gulp-babel` plugin installed, we can use it by simply calling `plugins.babel()` (note that is not necessary to add the
 `gulp-` prefix).
 3. We create a `paths` object with a `js` property. This property lists the globs that we'll use to find all the javascript
-files that need to be transpiled (not familiar with globts? more about them [here](https://www.npmjs.com/package/glob))
+files that need to be transpiled (not familiar with globs? more about them [here](https://www.npmjs.com/package/glob))
 4. We define our transpiling task where we basically do the following:
     1. Load all the babel javascript files with `gulp.src(...)`
     2. Transpile all the files by calling the gulp-babel plugin (`plugins.babel()`)
@@ -232,9 +232,11 @@ gulp nodemon
 {% endhighlight %}
 
 If everything went well, you should see the message `API Server started and listening on port 3000`. In that case you
-can tryout the API server by going to your favourite browser and going to http://localhost:3000/.
+can try out the API server by going to your favourite browser and going to http://localhost:3000/.
 You should see the "Hello, this is API and I'm ok" message returned to your browser.
 
+## Coming up next...
+
 With all this done, now it's time to make our API return dynamic data. For that to happen we'll need to setup a database
-to store all our tasks and users, but that will be part of the [next post]({% post_url 2016-07-24-building-a-node-restful-api-3  %}).
+to store all our tasks and users, but that will be part of the [next post]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %}).
 Thanks for reading!

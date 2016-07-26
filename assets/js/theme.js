@@ -707,7 +707,7 @@ jQuery(document).ready(function(){
 	// INDEX WAYPOINTS
 	if($('#posttitle').length){
 		var list = [];
-		$('.postbody h2').waypoint(function(direction) {
+		$('.postbody h2, .postbody h3, .postbody h4').waypoint(function(direction) {
 			var e = $(this);
 			if(direction === "down"){ 
 				$('.index h2').fadeOut(function() {

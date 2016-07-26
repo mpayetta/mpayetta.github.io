@@ -1,0 +1,36 @@
+# markdown-spellcheck spelling configuration file
+# Format - lines beginning # are comments
+# global dictionary is at the start, file overrides afterwards
+# one word per line, to define a file override use ' - filename'
+# where filename is relative to this configuration file
+node.js
+mongodb
+es6
+javascript
+3rd
+100
+npm
+webstorm
+ol
+es5
+js
+ok
+v8
+plugins
+api
+transpilation
+plugin
+gulpfile
+es2015
+stage-2
+db
+orm
+odm
+bcrypt
+mongo
+2
+hardcoded
+ - ./_posts/2016-07-24-building-a-node-restful-api-the-database.markdown
+med
+ - ./_posts/2016-07-25-building-a-node-restful-api-the-database-2.markdown
+export.default
