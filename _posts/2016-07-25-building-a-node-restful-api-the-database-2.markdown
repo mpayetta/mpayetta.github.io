@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js REST API: DB Connect and Config"
+title:  "Building a Node.js REST API 4: DB Connect and Config"
 date:   2016-07-25 12:56:45
 categories: Node.js
 banner_image: "/media/mongodb2.jpg"
@@ -15,9 +15,9 @@ comments: true
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous posts: 
 
-- [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
-- [Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
-- [The Database: Setup]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
+- [1. Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
+- [2. Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
+- [3. The Database: Setup]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
 
 ## The database connection
 

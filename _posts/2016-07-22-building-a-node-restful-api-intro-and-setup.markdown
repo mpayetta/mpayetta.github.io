@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js REST API: Intro and Initial Setup"
+title:  "Building a Node.js REST API 1: Intro and Initial Setup"
 date:   2016-07-22 12:56:45
 categories: Node.js
 banner_image: "/media/node-js-hexa.jpg"
@@ -40,19 +40,19 @@ Here is when your API comes into play, and the diagram below shows clearly what 
 {% highlight bash %}
     RESTful API helps to centralize the access to your application data
 
-                           +------------------------+
-                           |        Your Data       |
-                           +-----^------------+-----+
-                                 |            |
-                                 |            |
-                +----------------+------------v---------------+
-                |                 RESTful API                 |
-                +--^---------^------------^--------------^----+
-                   |         |            |              |
-                   |         |            |              |
-                +--+--+  +---+---+   +----+----+  +------+----+
-                | iOS |  |  Web  |   | Android |  | 3rd Party |
-                +-----+  +-------+   +---------+  +-----------+
+                       +------------------------+
+                       |        Your Data       |
+                       +-----^------------+-----+
+                             |            |
+                             |            |
+            +----------------+------------v---------------+
+            |                 RESTful API                 |
+            +--^---------^------------^--------------^----+
+               |         |            |              |
+               |         |            |              |
+            +--+--+  +---+---+   +----+----+  +------+----+
+            | iOS |  |  Web  |   | Android |  | 3rd Party |
+            +-----+  +-------+   +---------+  +-----------+
 {% endhighlight bash %}
 
 As you can see, any kind of client can access the REST API and display your system data in any way they want. A 

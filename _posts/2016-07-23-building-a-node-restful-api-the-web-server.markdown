@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js REST API: The Web Server"
+title:  "Building a Node.js REST API 2: The Web Server"
 date:   2016-07-23 12:56:45
 categories: Node.js
 banner_image: "/media/express.jpg"
@@ -13,7 +13,7 @@ comments: true
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous post: 
 
-- [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
+- [1. Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 
 ## The Web Server
 

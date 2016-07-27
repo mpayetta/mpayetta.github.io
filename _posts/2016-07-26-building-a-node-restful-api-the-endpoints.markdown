@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js REST API: The Routes"
+title:  "Building a Node.js REST API 5: The Routes"
 date:   2016-07-26 12:56:45
 categories: Node.js
 banner_image: "/media/endpoints.jpg"
@@ -13,10 +13,10 @@ comments: true
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
 the previous posts: 
 
-- [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
-- [Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
-- [The Database: Setup]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
-- [The Database: Connect and Config]({% post_url 2016-07-25-building-a-node-restful-api-the-database-2  %})
+- [1. Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
+- [2. Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
+- [3. The Database: Setup]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
+- [4. The Database: Connect and Config]({% post_url 2016-07-25-building-a-node-restful-api-the-database-2  %})
 
 If you followed the steps from the previous posts your project directory structure should look like this:
 
