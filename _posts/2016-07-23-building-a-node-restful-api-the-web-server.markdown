@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Building a Node.js RESTful API: The Web Server"
+title:  "Building a Node.js REST API: The Web Server"
 date:   2016-07-23 12:56:45
 categories: Node.js
 banner_image: "/media/express.jpg"
 featured: true
 comments: true
 ---
-
-<!--more-->
 
 ## Introduction
 
@@ -19,9 +17,11 @@ the previous post:
 
 ## The Web Server
 
+<!--from-->
 The web server will be the core of our API. It will handle all the incoming HTTP requests, validate the payload data,
 do the necessary security checks, fetch the requested data from the database and finally answer with a valid HTTP
 response to the requester.
+<!--to-->
 
 There are many web server options available in the [NPM registry](https://www.npmjs.com/search?q=web+server). We'll stick
 with a good ol' friend of all Node.js Developers called [Express](https://expressjs.com/). Express has proven to be one

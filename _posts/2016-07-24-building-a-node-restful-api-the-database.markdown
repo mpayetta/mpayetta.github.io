@@ -1,14 +1,12 @@
 ---
 layout: post
-title:  "Building a Node.js RESTful API: The Database"
+title:  "Building a Node.js REST API: The Database"
 date:   2016-07-24 12:56:45
 categories: Node.js
 banner_image: "/media/mongodb.jpeg"
 featured: true
 comments: true
 ---
-
-<!--more-->
 
 ## Introduction
 
@@ -20,9 +18,11 @@ the previous posts:
 
 ## Setting up the DB
 
+<!--from-->
 Ok, if everything went well, you should have `package.json` file on your project folder and it should look like the
 example one shown to you by the `npm init` wizard. After this, there are lots of things to be done to have our project
 setup and running. So let's get started by setting up our database.
+<!--to-->
 
 ### MongoDB
 

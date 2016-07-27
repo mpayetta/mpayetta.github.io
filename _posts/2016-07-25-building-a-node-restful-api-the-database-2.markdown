@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js RESTful API: DB Connect and Config"
+title:  "Building a Node.js REST API: DB Connect and Config"
 date:   2016-07-25 12:56:45
 categories: Node.js
 banner_image: "/media/mongodb2.jpg"
@@ -17,12 +17,14 @@ the previous posts:
 
 - [Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 - [Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
-- [The Database]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
+- [The Database: Setup]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %})
 
 ## The database connection
 
+<!--from-->
 So in our last post we left our project with the mongoose models ready to be used. All we need to do now is connect to 
 a real mongo database and start using our models to manipulate the data on it. 
+<!--to-->
 
 In order to connect to the database we need to have some specific data from our MongoDB server. And in any real world
 case, you would have multiple instances of your MongoDB server or at least 2: one for development and one for production.

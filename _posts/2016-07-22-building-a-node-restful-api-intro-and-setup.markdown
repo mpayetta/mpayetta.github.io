@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Node.js RESTful API: Intro and Initial Setup"
+title:  "Building a Node.js REST API: Intro and Initial Setup"
 date:   2016-07-22 12:56:45
 categories: Node.js
 banner_image: "/media/node-js-hexa.jpg"
@@ -8,15 +8,15 @@ featured: true
 comments: true
 ---
 
-<!--more-->
-
 ## Introduction
 
+<!--from-->
 Welcome to the first post of this series! In this collection of posts I'll explain how to build a RESTful API using 
 Node.js, MongoDB and Babel to make use of the power that ES6 brings to the javascript world.
 I've found myself multiple times building a RESTful API for different projects and always taken different approaches.
 Mostly because the Node.js ecosystem is growing so rapidly that whenever I start a new project there are already new
 tools and frameworks, or new versions of the frameworks I used in the past.
+<!--to-->
 
 You can also find lots of boilerplates ready to be used, if you're an experienced Node developer you can just grab one
 of those. The goal of this posts is to provide an understanding on how such a boilerplate can be built from scratch

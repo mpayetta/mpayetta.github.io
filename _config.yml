@@ -5,7 +5,7 @@ gems: 						[jekyll-paginate]
 # Site Settings
 title: 						"Coding Notes"
 email: 						"mauricio@bithive.io"
-description: 				"Welcome to my coding notes, where I write about things I learnt and share them with the world!"
+description: 				"In these coding notes I'm sharing my learning experiences and things that usually took time to understand and I hope they'll help you save some of your time. Enjoy!"
 baseurl: 					""
 logourl: 					"/assets/img/authorimage.jpg"
 fa-logo: 					"fa-code"
@@ -14,7 +14,7 @@ paginate: 					5
 
 # Author Settings
 author_name: 				"Mauricio"
-author_url: 				"http://mauriciopayetta.com"
+author_url: 				"http://blog.mpayetta.com"
 author_bio: 				"I'm an experienced fullstack engineer who loves travelling and learning. I co-founded <a href='https://bithive.io' target='_blank'>Bithive.io</a>, a fully distributed software consultancy firm. I've been part of the Lending Club, TomTom and Dianrong.com"
 author_email: 				"mauricio@bithive.io"
 author_image: 				"/assets/img/authorimage.jpg"

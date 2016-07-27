@@ -25,8 +25,8 @@ layout: default
 				Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
 			</span>
 			<div class="excerpt">
-				{% if post.content contains '<!--more-->' %}
-					{{ post.content | split:'<!--more-->' | first }}
+				{% if post.content contains '<!--from-->' %}
+					{{ post.content | split:'<!--from-->' | last | split:'<!--to-->' | first }} ...
 				{% else %}
 					{{ post.content }}
 				{% endif %}
