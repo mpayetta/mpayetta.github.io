@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://blog.mpayetta.com/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/about/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/contact/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/27/building-a-node-restful-api-security-jwt/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/26/building-a-node-restful-api-the-endpoints/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/25/building-a-node-restful-api-the-database-2/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/24/building-a-node-restful-api-the-database/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/23/building-a-node-restful-api-the-web-server/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/page2/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://blog.mpayetta.com/node.js/2016/07/22/building-a-node-restful-api-intro-and-setup/</loc>
+  <lastmod>2016-07-28T10:19:55+00:00</lastmod>
+  <changefreq>daily</changefreq>
+</url>
+</urlset>
