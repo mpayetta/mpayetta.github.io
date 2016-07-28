@@ -8,8 +8,6 @@ featured: true
 comments: true
 ---
 
-### This post is a work in progress
-
 ## Introduction
 
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
@@ -70,11 +68,11 @@ REST defines a clear and simple way to define the API endpoints which relies on 
 
 - GET: will be used to retrieve resources data
 - POST: will be used to create new resources
-- PUT: will be used to udpate existing resources
+- PUT: will be used to update existing resources
 - DELETE: yeah, as you imagined, will be used to delete resources
 
 REST goes also a step further and tells us how our endpoint URLs should look like. So let's say we have a resource called
-user, which represents all the users in our system. We'll need to create at least 5 different endpoints for the user resource
+user, which represents all the users in our system. We'll need to create at least five different endpoints for the user resource
 (and any other resource):
 
 -  `GET /users`: will return the list of users in our system
@@ -241,7 +239,7 @@ described before in this same post. Let's briefly explain what each of the funct
 - `load`: we'll use this controller function for all the requests that contain a `userId` on the path. This would be for
 the `GET /users/userId`, `PUT /users/userId` and `DELETE /users/userId`. This will make things easier by loading the
 user from the database and making it accessible in the request object as `req.dbUser`.
-- `get`: implementation for the `GET /users/userId` endpoint that returns a spedific user's data as json.
+- `get`: implementation for the `GET /users/userId` endpoint that returns a specific user's data as json.
 - `create`: implementation for the `POST /users` endpoint. It creates a new user document in our database by using the
 request body data sent by the client.
 - `update`: implementation for the `PUT /users/userId` endpoint. It also takes the data sent in the request body and uses
@@ -307,4 +305,193 @@ controller function `load` and then pass to the corresponding handler. So if for
 `GET /users/some-user-id-here`, the server will first call the `userCtrl.load` function and after that it will call the
 `userCtrl.get` function.
 
-All set, let's grab a console and try our set of endpoints
+### Testing the Endpoints
+
+All set, let's grab a console and try our set of endpoints. Let's start by creating a new user with our `POST /users`
+endpoint:
+
+{% highlight bash %}
+# POST /users
+$ curl -X POST http://localhost:3000/api/users \ 
+    -d username=test_user \
+    -d password=hello_world 
+{% endhighlight %}
+
+And the response should be something like this:
+
+{% highlight json %}
+{
+    "__v":0,
+    "username":"test_user",
+    "password":"$2a$10$stMU9L4tiQBVTz1ng1Yi0uqvIrHAL...",
+    "_id":"579949227038c8e0b2e399a7"
+}
+{% endhighlight %}
+
+And if we request a list of users with our `GET /users` endpoint, the response will be similar but wrapped in an array:
+
+{% highlight bash %}
+# GET /users
+$ curl http://localhost:3000/api/users
+{% endhighlight %}
+{% highlight json %}
+[
+  {
+    "__v":0,
+    "username":"test_user",
+    "password":"$2a$10$stMU9L4tiQBVTz1ng1Yi0uqvIrHAL...",
+    "_id":"579949227038c8e0b2e399a7"
+  }
+]
+{% endhighlight %}
+
+
+We have a new user with `_id` value `579949227038c8e0b2e399a7`. So let's use that id to try out other endpoints:
+
+{% highlight bash %}
+# GET /users/:userId
+$ curl http://localhost:3000/api/users/579949227038c8e0b2e399a7
+{% endhighlight %}
+{% highlight json %}
+{
+    "__v":0,
+    "username":"test_user",
+    "password":"$2a$10$stMU9L4tiQBVTz1ng1Yi0uqvIrHAL...",
+    "_id":"579949227038c8e0b2e399a7"
+}
+{% endhighlight %}
+
+Now let's update the username property of our only user:
+
+{% highlight bash %}
+# PUT /users/:userId
+$ curl -X PUT http://localhost:3000/api/users/579949227038c8e0b2e399a7 \
+    -d username=test_user_changed
+{% endhighlight %}
+
+In this case the response is just the status `204 No Content`, so we won't get anything back
+
+Finally let's remove the user with the `DELETE /users/:userId` endpoint:
+ 
+{% highlight bash %}
+# DELETE /users/:userId
+$ curl -X DELETE http://localhost:3000/api/users/579949227038c8e0b2e399a7 
+{% endhighlight %}
+
+And again, no answer for the `DELETE` operations.
+
+### Task Routes
+
+The routes configuration and implementation for tasks will be very similar, so I'll just put here the contents for the
+`routes/tasks.js` and `controllers/tasks.js` files, if something's not clear feel free to ask in the comments!
+
+#### The Task Routes Controller
+
+Create a `tasks.js` file inside the `server/controllers` directory and put the following contents on it:
+
+{% highlight javascript %}
+import Task from '../models/task';
+
+function load(req, res, next, id) {
+  Task.findById(id)
+    .exec()
+    .then((task) => {
+      req.dbTask = task;
+      return next();
+    }, (e) => next(e));
+}
+
+function get(req, res) {
+  return res.json(req.dbTask);
+}
+
+function create(req, res, next) {
+  Task.create({
+      user: req.body.user,
+      description: req.body.description
+    })
+    .then((savedTask) => {
+      return res.json(savedTask);
+    }, (e) => next(e));
+}
+
+function update(req, res, next) {
+  const task = req.dbTask;
+  Object.assign(task, req.body);
+
+  task.save()
+    .then(() => res.sendStatus(204),
+      (e) => next(e));
+}
+
+function list(req, res, next) {
+  const { limit = 50, skip = 0 } = req.query;
+  Task.find()
+    .skip(skip)
+    .limit(limit)
+    .exec()
+    .then((tasks) => res.json(tasks),
+      (e) => next(e));
+}
+
+function remove(req, res, next) {
+  const task = req.dbTask;
+  task.remove()
+    .then(() => res.sendStatus(204),
+      (e) => next(e));
+}
+
+export default { load, get, create, update, list, remove };
+{% endhighlight %}
+
+#### The Task Routes Configuration
+
+Create a `tasks.js` file inside the `server/routes` directory and put the following contents on it:
+
+{% highlight javascript %}
+import express from 'express';
+import taskCtrl from '../controllers/tasks';
+
+const router = express.Router();
+
+router.route('/')
+  /** GET /api/tasks - Get list of tasks */
+  .get(taskCtrl.list)
+
+  /** POST /api/tasks - Create new task */
+  .post(taskCtrl.create);
+
+router.route('/:taskId')
+  /** GET /api/tasks/:taskId - Get task */
+  .get(taskCtrl.get)
+
+  /** PUT /api/tasks/:taskId - Update task */
+  .put(taskCtrl.update)
+
+  /** DELETE /api/tasks/:taskId - Delete task */
+  .delete(taskCtrl.remove);
+
+/** Load task when API with taskId route parameter is hit */
+router.param('taskId', taskCtrl.load);
+
+export default router;
+{% endhighlight %}
+
+Finally add a two new lines to `server/routes/index.js` to mount the tasks routes in the `/tasks` path:
+
+{% highlight javascript %}
+...
+import taskRoutes from './tasks';
+...
+router.use('/tasks', taskRoutes);
+{% endhighlight %}
+
+
+## Coming up next...
+
+We have our endpoints up and running, now it's time to add some security to our RESTful API. We'll see how to add 
+authentication via [JSON Web Tokens](http://jwt.io) in the [next post]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
+
+
+
+
