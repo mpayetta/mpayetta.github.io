@@ -30,7 +30,28 @@ bcrypt
 mongo
 2
 hardcoded
+1
+3
+4
+config
+req.body
+json
+urlencoded
  - ./_posts/2016-07-24-building-a-node-restful-api-the-database.markdown
 med
  - ./_posts/2016-07-25-building-a-node-restful-api-the-database-2.markdown
 export.default
+ - ./_posts/2016-07-26-building-a-node-restful-api-the-endpoints.markdown
+RFC7231
+50
+ - ./_posts/2016-07-27-building-a-node-restful-api-security-jwt.markdown
+5
+JWT
+JWT.io
+7519
+64
+HMAC
+Jarrod
+Auth
+auth
+JWTs

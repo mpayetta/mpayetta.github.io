@@ -486,11 +486,16 @@ import taskRoutes from './tasks';
 router.use('/tasks', taskRoutes);
 {% endhighlight %}
 
+## Extending the API
+
+You're free to extend the API with as many endpoints as you want. For example you might want to add an endpoint to 
+retrieve all the tasks for a specific user. Or you can also add some filtering capabilities through query parameters like
+`GET /tasks?done=false` to return all the tasks that are not done yet.
 
 ## Coming up next...
 
 We have our endpoints up and running, now it's time to add some security to our RESTful API. We'll see how to add 
-authentication via [JSON Web Tokens](http://jwt.io) in the [next post]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
+authentication via [JSON Web Tokens](http://jwt.io) in the [next post]({% post_url 2016-07-27-building-a-node-restful-api-security-jwt  %})
 
 
 
