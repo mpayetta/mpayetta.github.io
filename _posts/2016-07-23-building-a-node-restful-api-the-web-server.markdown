@@ -240,3 +240,21 @@ You should see the "Hello, this is API and I'm ok" message returned to your brow
 With all this done, now it's time to make our API return dynamic data. For that to happen we'll need to setup a database
 to store all our tasks and users, but that will be part of the [next post]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %}).
 Thanks for reading!
+
+<div class="cc">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br/>
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+        Building a Node.js REST API 2: The Web Server
+    </span> 
+    by 
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.mpayetta.com" property="cc:attributionName" rel="cc:attributionURL">
+        Mauricio Payetta
+    </a> 
+    is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        Creative Commons Attribution-NonCommercial 4.0 International License
+    </a>.
+</div>

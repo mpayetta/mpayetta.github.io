@@ -34,7 +34,7 @@ theme_google_comments: 		false
 theme_analytics_id: 		"UA-81471053-1"
 theme_reading_time: 		true
 theme_autoload_comments: 	true
-theme_always_show_nav: 		true
+theme_always_show_nav: 		false
 
 
 # SASS Settings

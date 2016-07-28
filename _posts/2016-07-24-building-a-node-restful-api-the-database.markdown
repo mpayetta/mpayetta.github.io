@@ -221,3 +221,20 @@ Now that we have our database models ready, it's time to connect to the DB and s
 part of the [next post]({% post_url 2016-07-25-building-a-node-restful-api-the-database-2  %}). Thanks for reading!
 
 
+<div class="cc">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br/>
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+        Building a Node.js REST API 3: The Database
+    </span> 
+    by 
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.mpayetta.com" property="cc:attributionName" rel="cc:attributionURL">
+        Mauricio Payetta
+    </a> 
+    is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        Creative Commons Attribution-NonCommercial 4.0 International License
+    </a>.
+</div>

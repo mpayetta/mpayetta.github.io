@@ -367,6 +367,23 @@ We have our endpoints secured with a session-less approach with the help of JWT.
 we have to do are adding validation of data to our endpoints and add some unit testing with mocha. To continue with
 the validation head over to the [next post]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})!
 
+<div class="cc">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br/>
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+        Building a Node.js REST API 6: Authentication
+    </span> 
+    by 
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.mpayetta.com" property="cc:attributionName" rel="cc:attributionURL">
+        Mauricio Payetta
+    </a> 
+    is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        Creative Commons Attribution-NonCommercial 4.0 International License
+    </a>.
+</div>
 
 
 

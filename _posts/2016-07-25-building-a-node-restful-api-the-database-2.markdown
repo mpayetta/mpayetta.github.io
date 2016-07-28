@@ -187,3 +187,20 @@ Now our server is running and connected to our MongoDB. The next step will be to
 playing with the database and express routes! Look forward to see you on the [next post]({% post_url 2016-07-26-building-a-node-restful-api-the-endpoints  %})
 
 
+<div class="cc">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+    </a>
+    <br/>
+    <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
+        Building a Node.js REST API 4: DB Connect and Config
+    </span> 
+    by 
+    <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.mpayetta.com" property="cc:attributionName" rel="cc:attributionURL">
+        Mauricio Payetta
+    </a> 
+    is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+        Creative Commons Attribution-NonCommercial 4.0 International License
+    </a>.
+</div>
