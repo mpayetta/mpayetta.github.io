@@ -365,7 +365,7 @@ users.
 
 We have our endpoints secured with a session-less approach with the help of JWT. We're almost there, the last two things
 we have to do are adding validation of data to our endpoints and add some unit testing with mocha. To continue with
-the validation head over to the [next post]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})!
+the validation head over to the [next post]({% post_url 2016-07-28-building-a-node-restful-api-request-validation  %})!
 
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
