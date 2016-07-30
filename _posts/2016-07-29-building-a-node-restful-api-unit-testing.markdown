@@ -21,6 +21,8 @@ the previous posts:
 - [6. Security with JWT]({% post_url 2016-07-27-building-a-node-restful-api-security-jwt %})
 - [7. Request Validation]({% post_url 2016-07-28-building-a-node-restful-api-request-validation %})
 
+You can find the code for this tutorial in [GitHub](https://github.com/mpayetta/node-es6-rest-api).
+
 If you followed the steps from the previous posts your project directory structure should look like this:
 
 {% highlight bash %}

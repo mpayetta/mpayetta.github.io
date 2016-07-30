@@ -23,6 +23,8 @@ of those. The goal of this posts is to provide an understanding on how such a bo
 and understand the core pieces of it. I'm not planning to go deep in very basic concepts, but you can always post a comment
 in the post or find information online if there's anything you don't understand.
 
+You can find the code for this tutorial in [GitHub](https://github.com/mpayetta/node-es6-rest-api).
+
 
 ## Why a RESTful API?
 

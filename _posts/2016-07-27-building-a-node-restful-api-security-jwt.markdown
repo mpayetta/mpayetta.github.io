@@ -19,6 +19,8 @@ the previous posts:
 - [4. The Database: Connect and Config]({% post_url 2016-07-25-building-a-node-restful-api-the-database-2  %})
 - [5. The Endpoints]({% post_url 2016-07-26-building-a-node-restful-api-the-endpoints %})
 
+You can find the code for this tutorial in [GitHub](https://github.com/mpayetta/node-es6-rest-api).
+
 If you followed the steps from the previous posts your project directory structure should look like this:
 
 {% highlight bash %}

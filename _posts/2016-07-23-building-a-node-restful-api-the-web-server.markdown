@@ -15,6 +15,8 @@ the previous post:
 
 - [1. Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 
+You can find the code for this tutorial in [GitHub](https://github.com/mpayetta/node-es6-rest-api).
+
 ## The Web Server
 
 <!--from-->
