@@ -135,7 +135,7 @@ The `getTask` validation will run for all the endpoints that have a `taskId` pat
 There are three other kind of rules available which we're not using:
 
 - `query` will validate the data sent in the request query parameters (things after the first `?` in the URL)
-- `header` will validate the data sent in the reuqest headers.
+- `header` will validate the data sent in the request headers.
 - `cookies` will validate data sent on the request cookies.
 
 This validation groups (body, params, query, header, cookies) are defined by the other library we'll be using (express-validation).
@@ -194,7 +194,7 @@ There are two other changes done in the route configuration file:
 this case, two validation middlewares will be executed. The first one will be the one that validates the `taskId` path
 parameter, and the second one will validate the request body data sent to update the corresponding task information.
 
-All set, let's try the endpoints with some invalida data and see what happens. Grab a console and throw some requests on it:
+All set, let's try the endpoints with some invalid data and see what happens. Grab a console and throw some requests on it:
 
 {% highlight bash %}
 $ curl http://localhost:3000/api/tasks/invalid-task-id

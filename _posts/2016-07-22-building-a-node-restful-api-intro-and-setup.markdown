@@ -63,7 +63,7 @@ to test our API endpoints).
 
 I will assume you already have [Node](https://nodejs.org/en/) and [NPM](https://www.npmjs.com/) installed. You can find
 instructions to do this [here](https://docs.npmjs.com/getting-started/installing-node). 
-If you already have them installed, make sure you have NPM v3 installed, since we'll use Babel and the depedency hierarchy
+If you already have them installed, make sure you have NPM v3 installed, since we'll use Babel and the dependency hierarchy
 it's too deep and complex. Hence the NPM 3 [way of installing](https://docs.npmjs.com/how-npm-works/npm3) dependencies 
 in a "flat" way will highly decrease the time to transpile from Babel ES6 to ES5.
 

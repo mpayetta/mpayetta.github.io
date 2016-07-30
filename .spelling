@@ -37,6 +37,18 @@ config
 req.body
 json
 urlencoded
+kickoff
+joi
+regex
+objectids
+params
+middlewares
+7
+babelcompiler
+_env
+sinon
+chainable
+supertest
  - ./_posts/2016-07-24-building-a-node-restful-api-the-database.markdown
 med
  - ./_posts/2016-07-25-building-a-node-restful-api-the-database-2.markdown
@@ -55,3 +67,8 @@ Jarrod
 Auth
 auth
 JWTs
+ - ./_posts/2016-07-22-building-a-node-restful-api-intro-and-setup.markdown
+Apidoc
+v3
+ - ./_posts/2016-07-28-building-a-node-restful-api-request-validation.markdown
+6

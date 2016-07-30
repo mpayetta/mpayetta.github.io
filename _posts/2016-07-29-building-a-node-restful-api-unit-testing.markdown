@@ -87,13 +87,13 @@ export default {
 };
 {% endhighlight %}
 
-Contents are very similar to the ones in the `development.js` confiuguration, the main change is in the database name
+Contents are very similar to the ones in the `development.js` configuration, the main change is in the database name
 which is `node-es6-api-test` in this case.
 
 One other thing we'll need for our unit tests is a script that can easily wipe all the data in our testing database.
 We are going to run this script before each test to make sure we start with clean collections and the results of the
 tests don't interfere with each other. In our db clearing script we'll use a super useful module called `async`, so let's
-go ahed and install it:
+go ahead and install it:
 
 {% highlight bash %}
 npm install --save async
@@ -131,12 +131,12 @@ export function clearDatabase(callback) {
 }
 {% endhighlight %}
 
-So let's have a look at what we're doing here to cleanup the database:
+So let's have a look at what we're doing here to clean up the database:
 
 1. First we check if the environment is the `test` environment, otherwise we throw an error since we don't want to
 wipe any other data that is not testing data.
-2. We iterate over all the mongodb collections in our database and create an asynchronus function that will remove them.
-3. We use `async`'s parallel function to run all the asynchronus functions in parallel and once all of them finish we
+2. We iterate over all the mongodb collections in our database and create an asynchronous function that will remove them.
+3. We use `async`'s parallel function to run all the asynchronous functions in parallel and once all of them finish we
 call the callback function.
 
 ### The Test Running Tasks
@@ -297,7 +297,7 @@ sinon functionality.
 
 All our unit tests will start with a call to mocha's `describe` function, which will be the starting point for the test.
 The describe function has two parameters, the first one is a String that should represent what we're testing in this suite.
-The seconde one is a callback function with no parameters. So we can start by describing our test suite as the "Tasks API
+The second one is a callback function with no parameters. So we can start by describing our test suite as the "Tasks API
 Tests":
 
 {% highlight javascript %}
@@ -311,9 +311,9 @@ done for all tests, for example clearing the database in our case. Mocha provide
 `before`, `beforeEach`, `after` and `afterEach`. The `before` and `after` functions will be run once before and after all
 the tests in the suite, while their `Each` counterparts will run before and after every single test in the suite runs.
 
-In our case we want to cleanup the database before each test runs and we want to create a [sinon sandbox](http://sinonjs.org/docs/#sinon-sandbox) 
+In our case we want to clean up the database before each test runs and we want to create a [sinon sandbox](http://sinonjs.org/docs/#sinon-sandbox) 
 where we'll put all our mocks and stubs. And in the "afters" side, we want to restore the sandbox to it's initial state
-so that the defined mocks and stubs don't interefere with other tests mocks and stubs. So let's do that:
+so that the defined mocks and stubs don't interfere with other tests mocks and stubs. So let's do that:
 
 {% highlight javascript %}
 describe('## Tasks API Tests', () => {
@@ -523,12 +523,12 @@ Connected to database: mongodb://localhost/node-es6-api-test
   1 passing (275ms)
 {% endhighlight %}
 
-With this you should have enough tools and example to cover most of the API code. There will be more complex unt tests as 
+With this you should have enough tools and example to cover most of the API code. There will be more complex unit tests as 
 the API gets more complex as well.
 
 ## Conclusion
 
-Over the eight posts in this series we learnt how to build a RESTful API with Node.js from scracth. We understood how
+Over the eight posts in this series we learnt how to build a RESTful API with Node.js from scratch. We understood how
 to use different node modules to facilitate essential tasks related to API development such as security, validation and
 database access.
 
