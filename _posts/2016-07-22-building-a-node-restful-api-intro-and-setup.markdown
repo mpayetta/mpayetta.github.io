@@ -37,23 +37,7 @@ If we are 100% sure of something is that we don't want to replicate the same cod
 Here is when your API comes into play, and the diagram below shows clearly what I wanted to explain in the previous paragraph:
 
  
-{% highlight bash %}
-    RESTful API helps to centralize the access to your application data
-
-                       +------------------------+
-                       |        Your Data       |
-                       +-----^------------+-----+
-                             |            |
-                             |            |
-            +----------------+------------v---------------+
-            |                 RESTful API                 |
-            +--^---------^------------^--------------^----+
-               |         |            |              |
-               |         |            |              |
-            +--+--+  +---+---+   +----+----+  +------+----+
-            | iOS |  |  Web  |   | Android |  | 3rd Party |
-            +-----+  +-------+   +---------+  +-----------+
-{% endhighlight bash %}
+<img src="/media/REST-API.jpg">
 
 As you can see, any kind of client can access the REST API and display your system data in any way they want. A 
 successful action might be shown in a modal window in the web client, as a toast in the android app and as an alert

@@ -5,7 +5,7 @@ gems: 						[jekyll-paginate]
 # Site Settings
 title: 						"Coding Notes"
 email: 						"mauricio@bithive.io"
-description: 				"In these coding notes I'm sharing my learning experiences and things that usually took time to understand and I hope they'll help you save some of your time. Enjoy!"
+description: 				"In these coding notes I'm sharing my learning experiences and things that usually took time to understand and I hope they'll help you save some of your time. Enjoy! (All articles are released under a <a href='http://creativecommons.org/licenses/by-nc/4.0/' target='_blank'>Creative Commons BY-NC</a> license)"
 baseurl: 					""
 logourl: 					"/assets/img/authorimage.jpg"
 fa-logo: 					"fa-code"
@@ -25,7 +25,6 @@ twitter_url: 				"http://twitter.com/mpayetta"
 facebook_url: 				"http://facebook.com/mpayetta"
 github_url:  				"http://github.com/mpayetta"
 linkedin_url:  				"http://linkedin.com/mpayetta"
-instagram_url:              "http://instagram.com/mpayetta"
 
 
 # Theme Settings

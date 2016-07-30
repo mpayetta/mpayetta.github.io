@@ -316,6 +316,27 @@
 		}
 	}
 
+    img {
+        display: inline-block;
+        width: 70%;
+        margin-left: 15%;
+
+        &.full {
+            width: 100%;
+            margin-left: 0%;
+        }
+
+        &.med {
+          width: 50%;
+          margin-left: 25%;
+        }
+
+        &.small {
+          width: 30%;
+          margin-left: 35%;
+        }
+    }
+
 	@media screen and (max-width: 906px) {
 		padding-top: 120px;
 
@@ -330,6 +351,11 @@
 		&.featured {
 			padding-top: 0;
 		}
+
+        img, img.full, img.med, img.small {
+          width: 100%;
+          margin: 10px 0px;
+        }
 	}
 }
 

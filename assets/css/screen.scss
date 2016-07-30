@@ -50,7 +50,21 @@ ul.social.about {
 
   a {
     img {
+      width: auto;
+      margin-left: 0px;
       margin-bottom: 10px;
     }
+  }
+}
+
+a.bh {
+  display: block;
+  width: auto !important;
+  margin: 10px 0px;
+
+  img.bh-btn {
+    height: 35px !important;
+    width: auto !important;
+    margin: 0px !important;
   }
 }

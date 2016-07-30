@@ -15,3 +15,5 @@ Feel free to reach me anytime at <a href="mailto:mauricio@bithive.io">mauricio@b
     {% if site.linkedin_url != '' %}<li><a href="{{ site.linkedin_url }}" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>{% endif %}
     <li><a href="{{ site.baseurl }}/feed.xml" class="rss" target="_blank"><i class="fa fa-rss"></i></a></li>
 </ul>
+
+<a class="bh" href="https://bithive.io" target="_blank"><img class="bh-btn" src="/media/bh-button.jpg"></a>
