@@ -134,6 +134,11 @@ Thanks for reading!
 
 See you in the next post: [Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
 
+If you enjoyed reading, give a like to the tweet :)
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">The complete guide to write a RESTful API with Node and ES6 starts here! <a href="https://t.co/9Wj6iiS3Qc">https://t.co/9Wj6iiS3Qc</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/759583208501448704">31 de julio de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
