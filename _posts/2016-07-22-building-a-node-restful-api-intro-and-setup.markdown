@@ -4,6 +4,7 @@ title:  "Building a Node.js REST API 1: Intro and Initial Setup"
 date:   2016-07-22 12:56:45
 categories: Node.js
 banner_image: "/media/node-js-hexa.jpg"
+banner_idx: "/media/node-js_idx.jpg"
 featured: true
 comments: true
 ---

@@ -26,14 +26,17 @@ layout: default
 
 {% if page.featured == true %}
 <div id="cover" class="cover featured">
-	<div class="background" style="background-image:url('{{ page.banner_image }}');"></div>
+	<div class="background" style="background-image:url('{{ page.banner_image }}');background-position: 0px {{page.banner_position}}"></div>
 	<header class="wrapper">
-		<h2>
+		<h3>
 			{% for category in page.categories %}
 				{{ category }} 
 			{% endfor %}
-		</h2>
+		</h3>
 		<h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <h2>{{ page.subtitle }}</h2>
+    {% endif %}
 		<span>
 			Posted by <a href="{{ site.author_url }}" target="_blank">{{ site.author_name }}</a>
 				on <i class="fa fa-clock-o"></i> <time datetime="{{ page.date| date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>.

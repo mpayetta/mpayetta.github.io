@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Building a Node.js REST API 7: Request Validation"
+title:  "Building a Node.js REST API 7"
+subtitle: "Request Validation"
 date:   2016-07-28 12:56:45
 categories: Node.js
 banner_image: "/media/validation.jpg"
+banner_idx: "/media/validation_idx.jpg"
 featured: true
 comments: true
 ---

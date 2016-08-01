@@ -1,9 +1,11 @@
 ---
 layout: post
-title:  "Building a Node.js REST API 5: The Routes"
+title:  "Building a Node.js REST API 5"
+subtitle: "Defining the Routes"
 date:   2016-07-26 12:56:45
 categories: Node.js
 banner_image: "/media/endpoints.jpg"
+banner_idx: "/media/endpoints_idx.jpg"
 featured: true
 comments: true
 ---
