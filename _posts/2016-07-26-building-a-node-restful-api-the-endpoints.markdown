@@ -501,6 +501,11 @@ retrieve all the tasks for a specific user. Or you can also add some filtering c
 We have our endpoints up and running, now it's time to add some security to our RESTful API. We'll see how to add 
 authentication via [JSON Web Tokens](http://jwt.io) in the [next post]({% post_url 2016-07-27-building-a-node-restful-api-security-jwt  %})
 
+If you enjoyed reading, retweet or like this one!
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">DB is set, next step, define the RESTful endpoints! <a href="https://t.co/T0SHCDICZF">https://t.co/T0SHCDICZF</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760466888757350400">2 de agosto de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
