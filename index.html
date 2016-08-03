@@ -25,13 +25,13 @@ layout: default
       {% if post.subtitle %}
         <h1 class="subtitle">{{ post.subtitle }}</h1>
       {% endif %}
+      <span>
+				Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
+			</span>
       {% if post.banner_idx %}
         <figure class="post-list-cover" style="background-image:url('{{post.banner_idx}}');">
         </figure>
       {% endif %}
-			<span>
-				Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
-			</span>
 			<div class="excerpt">
 				{% if post.content contains '<!--from-->' %}
 					{{ post.content | split:'<!--from-->' | last | split:'<!--to-->' | first }} ...
