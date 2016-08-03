@@ -17,7 +17,7 @@ comments: true
 Nowadays it's very common to have a search feature in any website or app. This usually happens with platforms that have
 lots of information to offer to their users. From e-commerce websites which have thousands of products in different
 categories, to blogs or news sites which have thousands of articles. <!--to-->Whenever a client/user/reader reaches this kind of
-websites, they automatically tend to find a search box where they can typer a query to get to the specific 
+websites, they automatically tend to find a search box where they can type a query to get to the specific 
 article/product/whatever they're looking for. Having a bad search engine leads to frustrated users which will most 
 probably never come back to our websites again. 
 
@@ -115,7 +115,7 @@ very easy to test.
 ## ElasticSearch 
 ### What we're trying to do
 
-I just wanted to note that this post is just a super little tiny simple example of what you can achieve with Elastic Seearch.
+I just wanted to note that this post is just a super little tiny simple example of what you can achieve with Elastic Search.
 There are books written on it, so I don't want you to think Elastic Search it's useful just to implement autocomplete
 inputs. I just find it as an easy to understand example of how Elastic might help doing complex searches that MongoDB
 can't provide us.
@@ -141,18 +141,18 @@ So... how do we create an index that performs better than the built in MongoDB t
 in ES? We'll have to define what ES calls the `Analysis Chain`. This is simply put, the pipeline through which each
 of the documents we insert into the index will go through in order to be indexed. 
 
-An analysis chain is formed by [analyzers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html).
-Analyzers are filters that take the document, analyze and modify it and pass it to the next one. For example there might be an
-analyzer to remove the so called stop words, which are very common words that do not provide any useful information for
+An analysis chain is formed by [analysers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html).
+Analysers are filters that take the document, analyse and modify it and pass it to the next one. For example there might be an
+analyser to remove the so called stop words, which are very common words that do not provide any useful information for
 indexing, like `the` or `and`.
 
-Analyzers are composed by three functions: a `character filter`, a `tokenizer` and a `token filter`. The first one is in
+Analysers are composed by three functions: a `character filter`, a `tokenizer` and a `token filter`. The first one is in
 charge of cleaning up the string before it's tokenized, for example by striping HTML tags. The second one is the responsible
 for splitting it into terms, for example by splitting the string by spaces. The last one's job is to modify terms to 
 optimize the index purpose, for example by removing stop words or lowercasing all the terms.
 
-ES provides different analyzers which serve as a starting point for creating custom analyzers that suit better to any
-index needs. One of the alternatives provided by ES is called `edge_ngrams` analyzer. To understand what edge n-grams are,
+ES provides different analysers which serve as a starting point for creating custom analysers that suit better to any
+index needs. One of the alternatives provided by ES is called `edge_ngrams` analyser. To understand what edge n-grams are,
 we first need to understand what n-grams are. As the [n-gram wikipedia](https://en.wikipedia.org/wiki/N-gram) page points out:
 
 > an n-gram is a contiguous sequence of n items from a given sequence of text or speech
@@ -177,9 +177,9 @@ Which means that for `blueberry`, the edge n-grams will be:
 
 See where are we going with this? If you have the word `blueberry` indexed with it's edge n-grams, you can easily create
 an autocomplete search module. Because if user types `b`, it will match, if the user types `bl` it will match, if the user
-types `bla` it won't match anymore and the autocomplete option would dissapear.
+types `bla` it won't match anymore and the autocomplete option would disappear.
 
-So this edge n-gram thing should be definetely part of our index, and this is how we'll define it:
+So this edge n-gram thing should be definitely part of our index, and this is how we'll define it:
 
 {% highlight json %}
 {
@@ -199,7 +199,7 @@ for very big databases, having unigrams would slow down the performance a lot, s
 That's why many websites that have autocomplete function ask users to type at least three characters until they can 
 suggest alternatives.
 
-Now that we have our token filter defined, we need to define our custom analyzer:
+Now that we have our token filter defined, we need to define our custom analyser:
 
 {% highlight json %}
 {
@@ -216,11 +216,11 @@ Now that we have our token filter defined, we need to define our custom analyzer
 }
 {% endhighlight %}
 
-Here we define a custom `analyzer` called "autocomplete", we tell ES that it will be a custom analyzer, that will use the
-`standard` tokenizer and we set two filtering steps: `lowercase` (which is self-explanatory) and after that we set 
+Here we define a custom `analyzer` called "autocomplete", we tell ES that it will be a custom analyser, that will use the
+`standard` tokeniser and we set two filtering steps: `lowercase` (which is self-explanatory) and after that we set 
 our custom `autocomplete_filter`.
 
-Now that we defined the filter and the analyzer, let's create the index. Grab a console and execute the following `curl`
+Now that we defined the filter and the analyser, let's create the index. Grab a console and execute the following `curl`
 command:
 
 {% highlight bash %}
@@ -281,7 +281,7 @@ $ curl -H 'Content-Type: application/json' \
 {"acknowledged":true}
 {% endhighlight %}
 
-You can see that we used our `autocomplete` analyzer for the `title` property only. Since we're supposedly using this
+You can see that we used our `autocomplete` analyser for the `title` property only. Since we're supposedly using this
 for an autocomplete function it makes no sense to index the article content (unless you'd like to suggest article content
 to the user... which would be weird).
 
@@ -291,7 +291,7 @@ our MongoDB into it.
 ## Importing from MongoDB into ES
 
 To import our documents I could simply insert them manually into our ES index (I have only two documents in my collection
-of articles. The problem is that in real life we want to keep both MongoDB and our index syncrhonized, so that anytime a 
+of articles. The problem is that in real life we want to keep both MongoDB and our index synchronized, so that anytime a 
 new document is inserted, the same document will be indexed in ES.
 
 Fortunately for us, there's a tool called [`mongo-connector`](http://blog.mongodb.org/post/29127828146/introducing-mongo-connector)
@@ -323,7 +323,7 @@ You'll probably see some message like this one:
 2016-07-30T16:17:45.881+0900 [rsStart] replSet info you may need to run replSetInitiate -- rs.initiate() in the shell -- if that is not already done
 {% endhighlight %}
 
-All you have to do is obbey and open the mongo shell, and run `rs.initiate()`. It's possible that you might see this error
+All you have to do is obey and open the mongo shell, and run `rs.initiate()`. It's possible that you might see this error
 message when trying to initiate the replica set:
 
 {% highlight json %}
@@ -352,14 +352,14 @@ $ ./bin/elastic
 All set, time to run the mongo-connector.
 
 {% highlight bash %}
-$ mongo-connector -m localhost:27017 -t localhost:9200 -d elastic2_doc_manager
+$ mongo-connector -m 127.0.0.1:27017 -t 127.0.0.1:9200 -d elastic2_doc_manager
 {% endhighlight %}
 
 You can replace the parameters with your custom data, this is just the default localhost implementation of it. So here
 we basically tell mongo-connector to consume MongoDB data from `localhost:27017` and send it to the ES instance running
 on `localhost:9200`. All this will be done by using the `elastic2_doc_manager`. After a while (depending on how many
 MongoDB databases you have and how big they are), you should be able to see the new indexes in your ES instance.
-In my case it was almost instant, since I had only two documents in my `fulltext` database. So if you call the correpsonding
+In my case it was almost instant, since I had only two documents in my `fulltext` database. So if you call the corresponding
 ES endpoint to list indices, you should see this:
 
 {% highlight bash %}
@@ -387,8 +387,8 @@ which makes this task extremely easy. You can install it via NPM:
 $ npm install -g elasticdump
 {% endhighlight %}
 
-With elasticdump you can import analyzers, mappings and data from one ES index into another (or even into a json file).
-In our case we don't care about analyzers and mappings, we'll just import the data since the analyzer and mappings are
+With elasticdump you can import analysers, mappings and data from one ES index into another (or even into a json file).
+In our case we don't care about analysers and mappings, we'll just import the data since the analyser and mappings are
 already defined in our `fulltext_opt` index.
 
 {% highlight bash %}
@@ -448,7 +448,7 @@ curl -H 'Content-Type: application/json' \
 }
 {% endhighlight %}
 
-Voila! Got our document back. Note that we defined in our query the specific analyzer we wanted to use and set it to
+Voilà! Got our document back. Note that we defined in our query the specific analyser we wanted to use and set it to
 the standard one: 
 
 {% highlight json %}
@@ -460,10 +460,40 @@ the standard one:
 }
 {% endhighlight %}
 
-If we don't do this, since we're querying the index with our custom analyzer, it would use the `autocomplete` analyzer
+If we don't do this, since we're querying the index with our custom analyser, it would use the `autocomplete` analyser
 by default and query using the edge n-grams of the query text. This would lead to unwanted results, since we want to 
 search for the text `chi` specifically, and not for `c`, or `ch` or `chi`. This is why we have to explicitly set the
-analyzer to the standard one.
+analyser to the standard one.
+
+## Handling new MongoDB inserts
+
+So far we moved all our MongoDB collection contents to the fulltext_opt index by using mongo-connector. The only problem
+is that, as you probably remember, mongo-connector copies to an index with the same database name from MongoDB. This means
+that if we keep mongo-connector running as we have it now, all the new documents inserted in the database will be indexed
+in the `fulltext` index in ES and not the optimized `fulltext_opt`.
+
+The way to solve this is by configuring a bit more the mongo-connector command. There are many configuration options 
+that you can find [here](https://github.com/mongodb-labs/mongo-connector/wiki/Configuration%20Options). We'll use two
+of them: `namespaces.include` (`-n` in command line) and `namespaces.mapping` (`-g` in command line). 
+You can see how to configure mongo-connector through a json file, here I'll just use the command line arguments way.
+
+The `-n` option will tell mongo-connector which collections from MongoDB we want to index. The syntax for this is 
+`database_name.collection_name`. In our case we want to index all the articles from the `fulltext` database. So we'll
+pass a command line argument like this: `-n fulltext.articles`. 
+
+The `-g` option will tell mongo-connector into which index it should put all the documents taken from the collections 
+defined with the `-n` option. So in our case we want to put all our articles in the `fulltext_opt` index. We need to  
+provide as well which type within ES we want to use, so the full argument would be: `-g fulltext_opt.articles`, since
+we want our articles stored with the articles type in the index.
+
+That's it, now we can run the command like this:
+
+{% highlight bash %}
+$ mongo-connector -m 127.0.0.1:27017 -t 127.0.0.1:9200 -d elastic2_doc_manager -n fulltext.articles -g fulltext_opt.articles
+{% endhighlight %}
+
+If you keep mongo-connector running, all new inserts will be indexed in ES as well. Go ahead and insert a new document
+in the articles collection and then send a query to the ES index, the document should be returned.
 
 ## Conclusion
 

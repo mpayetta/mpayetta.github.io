@@ -49,6 +49,21 @@ _env
 sinon
 chainable
 supertest
+youtube
+dealbook
+caesars
+elasticsearch
+lowercasing
+wikipedia
+anymore
+_filter
+20-grams
+unigrams
+localhost
+elasticdump
+retweet
+payetta
+mpayetta
  - ./_posts/2016-07-24-building-a-node-restful-api-the-database.markdown
 med
  - ./_posts/2016-07-25-building-a-node-restful-api-the-database-2.markdown
@@ -72,3 +87,12 @@ Apidoc
 v3
  - ./_posts/2016-07-28-building-a-node-restful-api-request-validation.markdown
 6
+ - _drafts/2016-07-31-full-text-indexing-with-elastic-search-and-mongodb.markdown
+4.4
+2.X.
+fulltext
+_opt
+0
+31
+julio
+2016
