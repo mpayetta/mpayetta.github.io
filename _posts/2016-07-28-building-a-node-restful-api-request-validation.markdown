@@ -263,6 +263,11 @@ your endpoints.
 We're almost done with our API, the last post will be dedicated to unit testing our endpoints to prevent failures with
 future changes. So if you're ready for it, head over to the [next post]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})!
 
+If you enjoyed reading, retweet or like this one!
+
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">How to validate requests on our <a href="https://twitter.com/hashtag/express?src=hash">#express</a> <a href="https://twitter.com/hashtag/api?src=hash">#api</a> using express-validation and <a href="https://twitter.com/hapijs">@hapijs</a> <a href="https://twitter.com/hashtag/Joi?src=hash">#Joi</a> library<a href="https://t.co/crEJdS1pr8">https://t.co/crEJdS1pr8</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760740098136649728">3 de agosto de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
