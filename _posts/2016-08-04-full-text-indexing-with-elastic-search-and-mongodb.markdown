@@ -2,7 +2,7 @@
 layout: post
 title:  "Indexing MongoDB with ElasticSearch"
 subtitle: "A simple autocomplete index project"
-date:   2016-07-31 12:56:45
+date:   2016-08-04 12:56:45
 categories: ElasticSearch MongoDB
 banner_image: "/media/elastic.png"
 banner_idx: "/media/elastic_idx.jpg"
@@ -505,10 +505,7 @@ that might suit better for your own systems. As I mentioned around the beginning
 to show how you can import data from MongoDB into Elastic Search. The possibilities that ES brings to text indexing are
 huge, so go ahead and play with it!
 
-If you enjoyed reading, retweet or like this one!
-
-<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">The complete guide to write a RESTful API with Node and ES6 starts here! <a href="https://t.co/9Wj6iiS3Qc">https://t.co/9Wj6iiS3Qc</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/759583208501448704">31 de julio de 2016</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+If you enjoyed reading, retweet or like this one to spread the voice!
 
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
