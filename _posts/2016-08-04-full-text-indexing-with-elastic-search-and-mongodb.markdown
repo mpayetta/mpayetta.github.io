@@ -507,6 +507,9 @@ huge, so go ahead and play with it!
 
 If you enjoyed reading, retweet or like this one to spread the voice!
 
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">New post! Wondering how you can play with <a href="https://twitter.com/MongoDB">@MongoDB</a> and <a href="https://twitter.com/elastic">@elastic</a> search together? Have a look and leave your thoughts <a href="https://t.co/VF8Cvzy3ER">https://t.co/VF8Cvzy3ER</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/761161757247217664">4 de agosto de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
         <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
