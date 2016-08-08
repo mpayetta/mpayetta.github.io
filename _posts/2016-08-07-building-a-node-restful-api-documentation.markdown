@@ -354,10 +354,8 @@ you've been using a well documented API and how satisfying it was. You should do
 
 I hope you enjoyed reading, if so, please retweet or like this tweet!
 
-<!--
-<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">The complete guide to write a RESTful API with Node and ES6 starts here! <a href="https://t.co/9Wj6iiS3Qc">https://t.co/9Wj6iiS3Qc</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/759583208501448704">31 de julio de 2016</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Adding automatic documentation generation to your <a href="https://twitter.com/nodejs">@nodejs</a> <a href="https://twitter.com/hashtag/restful?src=hash">#restful</a> <a href="https://twitter.com/hashtag/API?src=hash">#API</a> with <br>the help of <a href="https://twitter.com/apiDocJS">@apiDocJS</a> and <a href="https://twitter.com/gulpjs">@gulpjs</a> <a href="https://t.co/d5rgNSqful">https://t.co/d5rgNSqful</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/762483642652209152">8 de agosto de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
--->
 
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
