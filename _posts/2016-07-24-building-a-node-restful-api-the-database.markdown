@@ -224,7 +224,7 @@ The rest of the model doesn't need explanation, besides we're using the `default
 Now that we have our database models ready, it's time to connect to the DB and start playing with it. But that will be
 part of the [next post]({% post_url 2016-07-25-building-a-node-restful-api-the-database-2  %}). Thanks for reading!
 
-If you enjoyed reading, retweet or like this one!
+If you enjoyed reading, retweet or like this tweet!
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Read about how to setup the database for a Node.js RESTful API <a href="https://t.co/R24Lvn1mDy">https://t.co/R24Lvn1mDy</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760252185976242177">1 de agosto de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

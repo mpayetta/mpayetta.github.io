@@ -190,7 +190,7 @@ Connected to database: mongodb://localhost/node-es6-api-dev
 Now our server is running and connected to our MongoDB. The next step will be to add the first endpoints to start
 playing with the database and express routes! Look forward to see you on the [next post]({% post_url 2016-07-26-building-a-node-restful-api-the-endpoints  %})
 
-If you enjoyed reading, retweet or like this one!
+If you enjoyed reading, retweet or like this tweet!
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Read about how to setup the database for a Node.js RESTful API <a href="https://t.co/R24Lvn1mDy">https://t.co/R24Lvn1mDy</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760252185976242177">1 de agosto de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

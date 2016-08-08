@@ -244,7 +244,7 @@ With all this done, now it's time to make our API return dynamic data. For that 
 to store all our tasks and users, but that will be part of the [next post]({% post_url 2016-07-24-building-a-node-restful-api-the-database  %}).
 Thanks for reading!
 
-If you enjoyed reading, retweet or like this one! 
+If you enjoyed reading, retweet or like this tweet! 
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Building a Node.js API step 2: setting up the Express server. Available here! <a href="https://t.co/NHi6ZVczmv">https://t.co/NHi6ZVczmv</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/759874399524622336">31 de julio de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

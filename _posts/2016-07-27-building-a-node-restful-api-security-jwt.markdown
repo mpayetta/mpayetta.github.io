@@ -371,7 +371,7 @@ We have our endpoints secured with a session-less approach with the help of JWT.
 we have to do are adding validation of data to our endpoints and add some unit testing with mocha. To continue with
 the validation head over to the [next post]({% post_url 2016-07-28-building-a-node-restful-api-request-validation  %})!
 
-If you enjoyed reading, retweet or like this one!
+If you enjoyed reading, retweet or like this tweet!
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Adding security to our RESTful API through the use of JSON Web Tokens <a href="https://t.co/65STooJf9t">https://t.co/65STooJf9t</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760614577981698050">2 de agosto de 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

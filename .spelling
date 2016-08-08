@@ -64,6 +64,12 @@ elasticdump
 retweet
 payetta
 mpayetta
+apidoc
+jwt
+apidocs
+dir
+github
+apidoc.json
  - ./_posts/2016-07-24-building-a-node-restful-api-the-database.markdown
 med
  - ./_posts/2016-07-25-building-a-node-restful-api-the-database-2.markdown
@@ -96,3 +102,7 @@ _opt
 31
 julio
 2016
+ - ./_posts/2016-08-07-building-a-node-restful-api-documentation.markdown
+5
+6
+8

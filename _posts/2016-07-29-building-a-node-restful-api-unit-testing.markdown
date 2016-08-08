@@ -540,6 +540,8 @@ that you can start using for other projects in the future.
 
 That's all, feel free to leave any comments with suggestions or questions below!
 
+#### [Bonus track: Adding docs to the API]({% post_url 2016-08-07-building-a-node-restful-api-documentation %})
+
 If you enjoyed the articles of this series, you can start by liking or retweeting this tweet! And the previous ones! :)
 
 <blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">The last step for our RESTful API: unit tests! <a href="https://t.co/HXs6rC8r8p">https://t.co/HXs6rC8r8p</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/760975272074018816">3 de agosto de 2016</a></blockquote>

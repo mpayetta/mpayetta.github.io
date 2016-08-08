@@ -15,7 +15,7 @@ paginate: 					5
 # Author Settings
 author_name: 				"Mauricio"
 author_url: 				"http://blog.mpayetta.com"
-author_bio: 				"I'm an experienced fullstack engineer who loves travelling and learning. I co-founded <a href='https://bithive.io' target='_blank'>Bithive.io</a>, a fully distributed software consultancy firm. I've been part of the Lending Club, TomTom and Dianrong.com"
+author_bio: 				"I'm a fullstack engineer who loves travelling and learning. I co-founded <a href='https://bithive.io' target='_blank'>Bithive.io</a>, a fully distributed software consultancy firm. I've been part of the Lending Club, TomTom and Dianrong.com"
 author_email: 				"mauricio@bithive.io"
 author_image: 				"/assets/img/authorimage.jpg"
 
