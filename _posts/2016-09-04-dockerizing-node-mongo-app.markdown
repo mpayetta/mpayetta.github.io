@@ -27,7 +27,8 @@ to the Docker beginners like me, who want to get a fully working instance of an 
 in a matter of seconds for daily work. This applies for any Node.js app, but for the matter of the post I'll work with 
 a dummy Express server that returns some dummy data from a MongoDB.
 
-Before starting make sure you have Node.js, npm and Docker installed.
+Before starting make sure you have Node.js, npm and Docker installed. The full code of the sample project can be found
+[here](https://github.com/mpayetta/express-node-docker)
 
 ## The dummy Node app
 
@@ -172,6 +173,10 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
 WORKDIR /opt/app
 ADD . /opt/app
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
 {% endhighlight %}
 
 In line `1` we copy our local `package.json` file into the `/tmp` directory on our image. Right after that on line `2`
@@ -181,6 +186,7 @@ running our app from this directory and hence we need to have our dependencies t
 `cp -a /tmp/node_modules /opt/app` command does.
 Then in line `5` we change our work directory to the `/opt/app` and finally we copy all our project code from our local
 host into the image app directory.
+Finally we expose the port 3000 where our app runs and run the `npm start` command to start the Express server.
 
 Each line in our Dockerfile will generate an image layer which will be cached. The first time we build the image there's
 nothing cached, so everything will be run from scratch, but let's see what happens with subsequent builds:
@@ -454,6 +460,8 @@ when doing the same app with the officla Node.js image it becomes around 500 MB 
 From now on, for me it's all about experimenting with Docker features and start learning more about it. I'm sure that 
 from today developing with distributed teams as I'm used to work will be much easier for everybody. Hope your life
 gets easier as well!
+
+The full code of the sample project can be found [here](https://github.com/mpayetta/express-node-docker)
 
 If you liked the post, please share it wherever you want or re-tweet the following tweet! :)
 
