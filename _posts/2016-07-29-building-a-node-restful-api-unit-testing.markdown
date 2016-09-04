@@ -3,7 +3,7 @@ layout: post
 title:  "Building a Node.js REST API 8"
 subtitle: "Unit Testing"
 date:   2016-07-29 12:56:45
-categories: Node.js
+categories: Node.js RESTful UnitTesting
 banner_image: "/media/testing.jpg"
 banner_idx: "/media/testing_idx.jpg"
 featured: true

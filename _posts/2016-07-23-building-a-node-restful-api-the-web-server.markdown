@@ -2,7 +2,7 @@
 layout: post
 title:  "Building a Node.js REST API 2: The Web Server"
 date:   2016-07-23 12:56:45
-categories: Node.js
+categories: Node.js RESTful Express
 banner_image: "/media/express.jpg"
 banner_idx: "/media/express_idx.jpg"
 featured: true

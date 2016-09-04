@@ -11,7 +11,7 @@ layout: default
 
 <div class="profile {% if page.featured == true %} featured {% endif %}">
 	{% if site.author_image != "" %}<img src="{{ site.author_image }}" class="profileimage" alt="user">{% endif %}
-	<h4>{{ site.author_name }}</h4>
+	<h4>{{ site.title }}</h4>
 	<ul>
 		{% if site.twitter_url != '' %}<li><a href="{{ site.twitter_url }}" class="smallsocialbutton twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>{% endif %}
 		{% if site.facebook_url != '' %}<li><a href="{{ site.facebook_url }}" class="smallsocialbutton facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>{% endif %}
@@ -28,11 +28,6 @@ layout: default
 <div id="cover" class="cover featured">
 	<div class="background" style="background-image:url('{{ page.banner_image }}');background-position: 0px {{page.banner_position}}"></div>
 	<header class="wrapper">
-		<h3>
-			{% for category in page.categories %}
-				{{ category }} 
-			{% endfor %}
-		</h3>
 		<h1>{{ page.title }}</h1>
     {% if page.subtitle %}
       <h2>{{ page.subtitle }}</h2>
@@ -41,6 +36,11 @@ layout: default
 			Posted by <a href="{{ site.author_url }}" target="_blank">{{ site.author_name }}</a>
 				on <i class="fa fa-clock-o"></i> <time datetime="{{ page.date| date: "%Y-%m-%d" }}">{{ page.date | date: "%B %-d, %Y" }}</time>.
 		</span>
+    <h3>
+      {% for category in page.categories %}
+      <span class="category">{{ category }}</span>
+      {% endfor %}
+    </h3>
 	</header>
 	<i class="fa fa-chevron-down movedown"></i>
 </div>

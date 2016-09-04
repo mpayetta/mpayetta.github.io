@@ -3,7 +3,7 @@ layout: post
 title:  "Building a Node.js REST API (Bonus Track)"
 subtitle: "API Documentation"
 date:   2016-08-07 11:30:45
-categories: Node.js
+categories: Node.js RESTful ApiDoc
 banner_image: "/media/apidoc.jpg"
 banner_idx: "/media/apidoc_idx.jpg"
 featured: true

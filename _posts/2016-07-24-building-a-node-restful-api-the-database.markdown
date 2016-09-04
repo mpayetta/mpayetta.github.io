@@ -3,7 +3,7 @@ layout: post
 title:  "Building a Node.js REST API 3"
 subtitle: "The Database"
 date:   2016-07-24 12:56:45
-categories: Node.js
+categories: Node.js RESTful MongoDB
 banner_image: "/media/mongodb.jpeg"
 banner_idx: "/media/mongodb_idx.jpg"
 featured: true

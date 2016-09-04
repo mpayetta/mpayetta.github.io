@@ -18,14 +18,16 @@ layout: default
 			<!--<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>-->
 			<h2>
 				{% for category in post.categories %}
-					{{ category }} 
+					<span class="category">
+            {{ category }}
+          </span>
 				{% endfor %}
 			</h2>
-			<h1><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
+			<h1 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h1>
       {% if post.subtitle %}
-        <h1 class="subtitle">{{ post.subtitle }}</h1>
+        <h1 class="post-subtitle">{{ post.subtitle }}</h1>
       {% endif %}
-      <span>
+      <span class="post-date">
 				Posted on <i class="fa fa-clock-o"></i><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>.
 			</span>
       {% if post.banner_idx %}

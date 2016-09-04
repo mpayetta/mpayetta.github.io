@@ -3,7 +3,7 @@ layout: post
 title:  "Building a Node.js REST API 4"
 subtitle: "DB Connect and Config"
 date:   2016-07-25 12:56:45
-categories: Node.js
+categories: Node.js RESTful MongoDB
 banner_image: "/media/mongodb2.jpg"
 banner_idx: "/media/mongodb2_idx.jpg"
 featured: true
