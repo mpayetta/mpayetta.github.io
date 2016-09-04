@@ -447,12 +447,18 @@ time you build. This approach used along with something like [nodemon](https://g
 to work on the project files and reflect the changes instantly in the running container. Feel free to ask if you need
 more info on this approach.
 
+We also saw how using other image rather than the official Node.js Docker image helped to save a lot of space. When I check
+my images with `docker images`, the dummy web app that uses the Alpine Node image is 81.28 MB big. On the other side,
+when doing the same app with the officla Node.js image it becomes around 500 MB big. That's like 600% bigger.
+
 From now on, for me it's all about experimenting with Docker features and start learning more about it. I'm sure that 
 from today developing with distributed teams as I'm used to work will be much easier for everybody. Hope your life
 gets easier as well!
 
 If you liked the post, please share it wherever you want or re-tweet the following tweet! :)
 
+<blockquote class="twitter-tweet" data-lang="es"><p lang="en" dir="ltr">Setting up <a href="https://twitter.com/docker">@docker</a> to run a <a href="https://twitter.com/nodejs">@nodejs</a> and <a href="https://twitter.com/MongoDB">@MongoDB</a> application. A lightweight approach with <a href="https://twitter.com/alpinelinux">@alpinelinux</a> <a href="https://t.co/TrPuzH7Y63">https://t.co/TrPuzH7Y63</a></p>&mdash; Mauricio Payetta (@mpayetta) <a href="https://twitter.com/mpayetta/status/772360075964854273">4 de septiembre de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <div class="cc">
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
