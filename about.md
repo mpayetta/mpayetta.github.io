@@ -11,7 +11,7 @@ specially Java with which I've spent half of my professional career.
 
 I co-founded <a href='https://bithive.io' target='_blank'>Bithive.io</a>, a fully distributed software consultancy firm.
 
-I'm a travel adict and have spent the past (almost) 4 years living abroad (Germany, China and South Korea) and taking 
+I'm a travel addict and have spent the past (almost) 4 years living abroad (Germany, China and South Korea) and taking 
 flights anytime I can.
 
 In my free time I also write about things I've learnt on this blog, to share it with the developers of the world and 
