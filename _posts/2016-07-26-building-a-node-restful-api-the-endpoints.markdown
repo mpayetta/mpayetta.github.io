@@ -13,7 +13,7 @@ comments: true
 ## Introduction
 
 Welcome again! If you reached this post from nowhere and don't understand what all this is about, you can check out
-the previous posts: 
+the previous posts:
 
 - [1. Intro and Initial Setup]({% post_url 2016-07-22-building-a-node-restful-api-intro-and-setup  %})
 - [2. Setting up the Web Server]({% post_url 2016-07-23-building-a-node-restful-api-the-web-server  %})
@@ -56,7 +56,7 @@ mkdir controllers
 {% endhighlight %}
 
 Basically in the `routes` directory we'll put all the route configuration related code, and in the `controllers` directory
-we'll put all the implementations for the routes. 
+we'll put all the implementations for the routes.
 
 Before we start creating the routes let's understand a bit how a REST API should be organized in terms of endpoints.
 
@@ -92,7 +92,7 @@ approach and create those endpoints for our users and tasks resources.
 ### Route Configuration
 
 Let's start by creating an `index.js` file inside the routes folder. Inside this file we'll put the "health check" endpoint
-we had defined in our `config/express.js` file and we'll mount the rest of the endpoints later. So for now the 
+we had defined in our `config/express.js` file and we'll mount the rest of the endpoints later. So for now the
 `server/routes/index.js` file will look like this:
 
 {% highlight javascript %}
@@ -111,7 +111,7 @@ export default router;
 {% endhighlight %}
 
 Here we define an express router (more about express routing [here](https://expressjs.com/en/guide/routing.html)). And in
-this router we create a `get` endpoint on the `/api-status` path, which will answer with a JSON object saying that the 
+this router we create a `get` endpoint on the `/api-status` path, which will answer with a JSON object saying that the
 API is ok when it's running.
 
 Now that we'll have our routes configured separately in the `routes` directory we can mount them in our server. To do that
@@ -148,7 +148,7 @@ Before we define our user routes, we need to add a middleware to our express app
 [body parser](https://github.com/expressjs/body-parser). As the body parser docs state it allows you to:
 
 > Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
-  
+
 So basically whenever a `PUT` or `POST` request arrives with data in the request body, it will parse it and put it as
 a json object in the `req.body` field so that we can use that data in our route handlers. Let's install it!
 
@@ -175,7 +175,7 @@ export default app;
 {% endhighlight %}
 
 Here we configure two parsers, one for json request bodies (where `Content-Type` is `application/json`) and one for
-urlencoded (where `Content-Type` is `x-ww-form-urlencoded`). 
+urlencoded (where `Content-Type` is `x-ww-form-urlencoded`).
 
 #### The Users Route Controller
 
@@ -237,7 +237,7 @@ function remove(req, res, next) {
 export default { load, get, create, update, list, remove };
 {% endhighlight %}
 
-This will be our users controller module, and it contains all the necessary code to implement the five endpoints I've 
+This will be our users controller module, and it contains all the necessary code to implement the five endpoints I've
 described before in this same post. Let's briefly explain what each of the functions in this controller does:
 
 - `load`: we'll use this controller function for all the requests that contain a `userId` on the path. This would be for
@@ -290,9 +290,9 @@ router.param('userId', userCtrl.load);
 export default router;
 {% endhighlight %}
 
-This one looks simple, so here we're defining two routes: `/` and `/:userId`. We'll mount this two routes under the 
+This one looks simple, so here we're defining two routes: `/` and `/:userId`. We'll mount this two routes under the
 `/users` path later, so they will become `/users` and `/users/:userId`. Under each of this routes, we define the different
-verbs supported on that route, and we assign a controller function to each of them. So as an example, let's take the 
+verbs supported on that route, and we assign a controller function to each of them. So as an example, let's take the
 first one:
 
 `router.route('/').get(userCtrl.list)`
@@ -309,6 +309,23 @@ controller function `load` and then pass to the corresponding handler. So if for
 `GET /users/some-user-id-here`, the server will first call the `userCtrl.load` function and after that it will call the
 `userCtrl.get` function.
 
+Finally we have to mount the routes into our express app so that they will be accessible (special thanks to Dave Harned
+for pointing out I missed this part!). For this purpose we'll go to the `server/routes/index.js` file and add the following lines:
+
+```
+import userRoutes from './users';
+
+...
+
+router.use('/users', userRoutes);
+```
+
+We're first importing the user routes definitions that we did just made and then it's mounting these definitions into the
+`/users` path. So whenever a requests comes to the server starting with `/users`, express will check for route definitions
+inside our `userRoutes`. So whatever we defined within `userRoutes` will be called when the URL path starts with `/users`.
+Let's try to clarify that with an example: if the server gets a request like this `GET /users/123456`, then the `GET /:userId`
+handler defined in `userRoutes` will be called.
+
 ### Testing the Endpoints
 
 All set, let's grab a console and try our set of endpoints. Let's start by creating a new user with our `POST /users`
@@ -316,9 +333,9 @@ endpoint:
 
 {% highlight bash %}
 # POST /users
-$ curl -X POST http://localhost:3000/api/users \ 
+$ curl -X POST http://localhost:3000/api/users \
     -d username=test_user \
-    -d password=hello_world 
+    -d password=hello_world
 {% endhighlight %}
 
 And the response should be something like this:
@@ -376,10 +393,10 @@ $ curl -X PUT http://localhost:3000/api/users/579949227038c8e0b2e399a7 \
 In this case the response is just the status `204 No Content`, so we won't get anything back
 
 Finally let's remove the user with the `DELETE /users/:userId` endpoint:
- 
+
 {% highlight bash %}
 # DELETE /users/:userId
-$ curl -X DELETE http://localhost:3000/api/users/579949227038c8e0b2e399a7 
+$ curl -X DELETE http://localhost:3000/api/users/579949227038c8e0b2e399a7
 {% endhighlight %}
 
 And again, no answer for the `DELETE` operations.
@@ -492,13 +509,13 @@ router.use('/tasks', taskRoutes);
 
 ## Extending the API
 
-You're free to extend the API with as many endpoints as you want. For example you might want to add an endpoint to 
+You're free to extend the API with as many endpoints as you want. For example you might want to add an endpoint to
 retrieve all the tasks for a specific user. Or you can also add some filtering capabilities through query parameters like
 `GET /tasks?done=false` to return all the tasks that are not done yet.
 
 ## Coming up next...
 
-We have our endpoints up and running, now it's time to add some security to our RESTful API. We'll see how to add 
+We have our endpoints up and running, now it's time to add some security to our RESTful API. We'll see how to add
 authentication via [JSON Web Tokens](http://jwt.io) in the [next post]({% post_url 2016-07-27-building-a-node-restful-api-security-jwt  %})
 
 If you enjoyed reading, retweet or like this tweet!
@@ -513,15 +530,13 @@ If you enjoyed reading, retweet or like this tweet!
     <br/>
     <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
         Building a Node.js REST API 5: The Routes
-    </span> 
-    by 
+    </span>
+    by
     <a xmlns:cc="http://creativecommons.org/ns#" href="http://blog.mpayetta.com" property="cc:attributionName" rel="cc:attributionURL">
         Mauricio Payetta
-    </a> 
-    is licensed under a 
+    </a>
+    is licensed under a
     <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
         Creative Commons Attribution-NonCommercial 4.0 International License
     </a>.
 </div>
-
-
