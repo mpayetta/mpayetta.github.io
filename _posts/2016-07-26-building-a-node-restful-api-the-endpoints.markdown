@@ -312,13 +312,13 @@ controller function `load` and then pass to the corresponding handler. So if for
 Finally we have to mount the routes into our express app so that they will be accessible (special thanks to Dave Harned
 for pointing out I missed this part!). For this purpose we'll go to the `server/routes/index.js` file and add the following lines:
 
-```
+{% highlight javascript %}
 import userRoutes from './users';
 
 ...
 
 router.use('/users', userRoutes);
-```
+{% endhighlight %}
 
 We're first importing the user routes definitions that we did just made and then it's mounting these definitions into the
 `/users` path. So whenever a requests comes to the server starting with `/users`, express will check for route definitions
